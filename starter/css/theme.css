@@ -15,8 +15,8 @@
 
 :root {
   --color-primary: var(--green-700);
-  --color-primary-hover: var(--green-900);
-  --color-primary-soft: var (--gray-200);
+  --color-primary-hover: var(--green-800);
+  --color-primary-soft: var(--gray-200);
   --color-focus: var(--blue-800);
   --font-sans: swap;
   /*

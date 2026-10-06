@@ -1,0 +1,129 @@
+<!doctype html>
+<!-- lang : langue de la page, utilisee par les lecteurs d'ecran et les moteurs de recherche. -->
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- Sans cette balise, le mobile affiche la page en version desktop dezoomee. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Titre unique par page : "Nom de la page - Nom du site". C'est ce qui
+       s'affiche dans l'onglet, l'historique et les resultats de recherche. -->
+    <title>Nom de la page - TechCorp RH</title>
+    <meta
+      name="Guide de style - TechCorp RH"
+      content="decris la charte graphique du site TechCorp RH"
+    />
+
+    <!-- Application interne : pas d'indexation par les moteurs de recherche. -->
+    <meta name="robots" content="noindex, nofollow" />
+    <meta name="theme-color" content="#1d4ed8" />
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+
+    <link rel="stylesheet" href="../css/main.css" />
+    <style>
+      .couleurs__cadre {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+      }
+      .couleurs__box {
+        border: 1px solid;
+      }
+      .pastille {
+        width: 15rem;
+        height: 5rem;
+        border: 2px solid;
+      }
+      #primary {
+        background-color: var(--color-primary);
+      }
+      #primary-hover {
+        background-color: var(--color-primary-hover);
+      }
+      #primary-soft {
+        background: var(--color-primary-soft);
+      }
+      #bg {
+        background-color: var(--color-bg);
+      }
+    </style>
+    <script src="js/app.js" defer></script>
+  </head>
+  <body>
+    <main>
+      <h1>Design system TechCorp RH</h1>
+
+      <section class="couleurs">
+        <h2>Couleurs Sémantiques</h2>
+        <div class="couleurs__cadre">
+          <div class="couleurs__box">
+            <div class="pastille" id="primary"></div>
+            <h3
+              class="couleurs__titre"
+              aria-label="Primary"
+              aria-labelledby="color"
+            >
+              --color-primary
+            </h3>
+          </div>
+          <div class="couleurs__box">
+            <div class="pastille" id="primary-hover"></div>
+            <h3
+              class="couleurs__titre"
+              aria-label="Primary-hover"
+              aria-labelledby="color"
+            >
+              --color-primary-hover
+            </h3>
+          </div>
+          <div class="couleurs__box">
+            <div class="pastille" id="primary-soft"></div>
+            <h3
+              class="couleurs__titre"
+              aria-label="Primary-soft"
+              aria-labelledby="color"
+            >
+              --color-primary-soft
+            </h3>
+          </div>
+
+          <div class="couleurs__box">
+            <div class="pastille" id="bg"></div>
+            <h3
+              class="couleurs__titre"
+              aria-label="BackGround"
+              aria-labelledby="color"
+            >
+              --color-bg
+            </h3>
+          </div>
+        </div>
+      </section>
+      <section class="typo">
+        <h2>Typographie</h2>
+        <div class="typo__cadre">
+          <div class="typo__box">
+            <p class="texte" id="3xl"
+              class="typo__titre"
+              aria-label="3xl"
+              aria-labelledby="texte"
+            >
+              ---text-3xl
+            </h3>
+          </div>
+          <div class="typo__box">
+            <p class="texte" id="2xl"
+              class="typo__titre"
+              aria-label="2xl"
+              aria-labelledby="texte"
+            >
+              ---text-2xl
+            </h3>
+          </div>
+ 
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
