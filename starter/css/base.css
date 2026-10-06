@@ -15,7 +15,6 @@ html {
   color: var(--color-text);
   background-color: var(--color-bg);
 }
-
 body {
   font-size: var(--text-base);
   line-height: var(--leading-normal);
