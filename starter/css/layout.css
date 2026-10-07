@@ -8,3 +8,58 @@
    - .grid-auto : grille de cartes responsive sans media query
    Rappel : mobile-first, breakpoints 40em et 64em.
    ========================================================================== */
+
+.auth {
+  display: grid;
+  min-height: 100vh;
+  grid-template-columns: 8rem 1fr;
+  grid-template-rows: 2rem 1fr;
+}
+.auth__aside {
+  visibility: hidden;
+  background-color: var(--color-primary);
+  grid-column-start: 1;
+  grid-row: 1/-1;
+}
+.auth__main {
+  padding: var(--space-2);
+  background-color: var(--color-bg);
+  grid-column-start: 1;
+  grid-column-end: -1;
+  grid-row-start: 1;
+  grid-row-end: -1;
+  place-items: center;
+}
+.auth__panel {
+  max-width: 28rem;
+  height: 100%;
+  display: grid;
+  grid-template-rows: 2rem 1fr 2rem 2rem;
+}
+.auth__box {
+  display: flex;
+  flex-direction: column;
+  max-width: 20em;
+}
+
+.auth_footer {
+  align-items: center;
+}
+@media (min-width: 64em) {
+  .auth__aside {
+    visibility: visible;
+  }
+  .auth__main {
+    grid-column-start: 2;
+    grid-row-start: 2;
+  }
+}
+/*.auth                      grille, toute la hauteur de l'écran
+  .auth__aside             panneau coloré (desktop uniquement) : logo, accroche, copyright
+  main.auth__main          centre son contenu
+    .auth__panel           largeur max 28rem
+      h1 "Connexion"
+      p  "Utilisez votre adresse e-mail professionnelle."
+      form                 e-mail, mot de passe, "Rester connecté", bouton
+      p  lien vers inscription.html
+      footer               mentions légales, confidentialité, accessibilité*/

@@ -169,3 +169,9 @@
   color: var(--color-danger-text);
   border-color: var(--color-danger);
 }
+.logo {
+  width: 8rem;
+  height: 48px;
+  display: flex;
+  flex-direction: row;
+}
