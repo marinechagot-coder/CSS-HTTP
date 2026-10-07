@@ -1,0 +1,67 @@
+<!doctype html>
+<!-- lang : langue de la page, utilisee par les lecteurs d'ecran et les moteurs de recherche. -->
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- Sans cette balise, le mobile affiche la page en version desktop dezoomee. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Titre unique par page : "Nom de la page - Nom du site". C'est ce qui
+       s'affiche dans l'onglet, l'historique et les resultats de recherche. -->
+    <title>Nom de la page - TechCorp RH</title>
+    <meta
+      name="Connexion - TechCorp RH"
+      content="Ecran de connexion à l'outils TechCorp RH"
+    />
+
+    <!-- Application interne : pas d'indexation par les moteurs de recherche. -->
+    <meta name="robots" content="noindex, nofollow" />
+    <meta name="theme-color" content="#1d4ed8" />
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+
+    <link rel="stylesheet" href="css/main.css" />
+    <script src="js/app.js" defer></script>
+  </head>
+  <body class="auth">
+    <aside class="auth__aside">
+      <div class="brand">
+        <img src="assets/logo.svg" alt="Logo TechCorp" />
+        <p>TechCorp</p>
+      </div>
+      <p>test</p>
+    </aside>
+    <main class="auth__main">
+      <h1>Connexion</h1>
+      <section class="auth__panel">
+        <p>Utilisez votre adresse e-mail professionnelle.</p>
+        <form class="auth__form">
+          <div class="auth__box">
+            <label for="email">Entrez votre email techCorp.io&nbsp;:</label>
+            <input
+              type="email"
+              id="email"
+              pattern=".+@techCorp\.io"
+              size="30"
+              required
+            />
+          </div>
+          <div class="auth__box">
+            <label for="pass">Mot de passe:</label>
+            <input
+              type="password"
+              id="pass"
+              name="password"
+              minlength="8"
+              required
+            />
+          </div>
+          <input class="btn" type="button" value="connexion" ></button>
+        </form>
+        <p>Nouveau compte <a href="#">Contacter RH</a></p>
+        <footer class="auth_footer">
+          mentions légales, confidentialité, accessibilité
+        </footer>
+      </section>
+    </main>
+  </body>
+</html>
