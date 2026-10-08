@@ -1,0 +1,139 @@
+<!doctype html>
+<!-- lang : langue de la page, utilisee par les lecteurs d'ecran et les moteurs de recherche. -->
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- Sans cette balise, le mobile affiche la page en version desktop dezoomee. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Titre unique par page : "Nom de la page - Nom du site". C'est ce qui
+       s'affiche dans l'onglet, l'historique et les resultats de recherche. -->
+    <title>Dashboard - TechCorp RH</title>
+    <meta
+      name="Dashboard Manager"
+      content="dashbord affichant les synthèses des informations de votre équipe."
+    />
+
+    <!-- Application interne : pas d'indexation par les moteurs de recherche. -->
+    <meta name="robots" content="noindex, nofollow" />
+    <meta name="theme-color" content="#1d4ed8" />
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+
+    <link rel="stylesheet" href="css/main.css" />
+    <script src="js/app.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#contenu">Aller au contenu principal</a>
+
+    <div class="app">
+      <header class="app__header topbar">
+        <button
+          class="topbar__menu"
+          type="button"
+          data-nav-toggle
+          aria-expanded="false"
+          aria-controls="navigation"
+        >
+          <svg
+            class="nav__icon"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            aria-hidden="true"
+            focusable="false"
+          >
+            <path d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+          <span class="sr-only">Ouvrir le menu</span>
+        </button>
+
+        <a class="brand" href="dashboard-employe.html">
+          <img
+            class="brand__logo"
+            src="assets/logo.svg"
+            alt=""
+            width="32"
+            height="32"
+          />
+          TechCorp RH
+        </a>
+
+        <div class="topbar__actions">
+          <div class="user">
+            <span class="avatar" aria-hidden="true">QB</span>
+            <div class="user__info">
+              <p class="user__name">Quentin Blanchard</p>
+              <p class="user__role">Manager</p>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <nav
+        class="app__sidebar sidebar"
+        id="navigation"
+        aria-label="Navigation principale"
+      >
+        <h2 class="nav__heading" id="nav-perso">Mon espace</h2>
+        <ul class="nav" role="list" aria-labelledby="nav-perso">
+          <li>
+            <a
+              class="nav__link"
+              href="dashboard-employe.html"
+              >Tableau de bord</a
+            >
+          </li>
+          <li>
+            <a class="nav__link" href="conges-demande.html">Mes congés</a>
+          </li>
+          <li>
+            <a class="nav__link" href="note-frais-nouvelle.html"
+              >Notes de frais</a
+            >
+          </li>
+          <li><a class="nav__link" href="materiel.html">Matériel</a></li>
+          <li><a class="nav__link" href="profil.html">Mon profil</a></li>
+        </ul>
+        <h2 class="nav__heading" id="nav-equip">Mon equipe</h2>
+        <ul class="nav" role="list" aria-labelledby="nav-equip">
+          <li>
+            <a
+              class="nav__link"
+              href="dashboard-manager.html"
+              aria-current="page"
+              >Vue d'équipe</a
+            >
+          </li>
+          <li>
+            <a class="nav__link" href="liste-demande.html">
+              Demandes à traiter
+              <span class="count">5<span class="sr-only"> en attente</span></span>
+            </a>
+          </li>
+          <li>
+            <a class="nav__link" href="planning-equipe.html"
+              >Planning d'équipe</a
+            >
+          </li>
+        </ul>
+      </nav>
+
+      <main class="app__main" id="contenu" tabindex="-1">
+        <div class="container">
+          <div class="page-header">
+            <div>
+              <h1>Vue d'équipe</h1>
+              <p class="page-header__subtitle">Pôle Web, 8 collaborateurs</p>
+            <div class="page-header__actions">
+              <a class="btn btn--secondary" href="planning-equipe.html">Voir le planning</a>
+              <a class="btn btn--primary" href="liste-demande.html">Traiter les demandes</a>
+            </div>
+          </div>
+
+        </div>
+  
+      </main>
+    </div>
+  </body>
+</html>
