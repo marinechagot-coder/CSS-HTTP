@@ -61,10 +61,10 @@
 
         <div class="topbar__actions">
           <div class="user">
-            <span class="avatar" aria-hidden="true">CM</span>
+            <span class="avatar" aria-hidden="true">MB</span>
             <div class="user__info">
-              <p class="user__name">Claire Martin</p>
-              <p class="user__role">Développeuse</p>
+              <p class="user__name">Mounir Bendahmane</p>
+              <p class="user__role">Développeur</p>
             </div>
           </div>
         </div>
@@ -100,9 +100,48 @@
 
       <main class="app__main" id="contenu" tabindex="-1">
         <div class="container">
-          <!-- contenu de la page : étape 3 -->
+          <div class="page-header">
+          <div>
+            <h1>Bonjour Mounir</h1>
+            <p class="page-header__subtitle">Voici le résumé de votre activité au 8 octobre 2026.</p>
+          </div>
+          <div class="page-header__actions">
+            <a class="btn btn--secondary" href="note-frais-nouvelle.html">Nouvelle note de frais</a>
+            <a class="btn btn--primary" href="conges-demande.html">
+              <svg class="btn__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 5v14M5 12h14"/></svg>
+              Demander un congé
+            </a>
+          </div>
         </div>
+        <section aria-labelledby="titre-soldes">
+          <h2 id="titre-soldes" class="sr-only">Mes soldes</h2>
+          <ul class="grid-auto list" role="list">
+            <li class="card stat">
+              <span class="stat__label">Congés payés restants</span>
+              <span class="stat__value">14 <span class="stat__unit">jours</span></span>
+              <div class="bar" aria-hidden="true"><div class="bar__fill" style="width: 56%"></div></div>
+              <span class="stat__hint">8 pris, 3 en attente, sur 25</span>
+            </li>
+            <li class="card stat">
+              <span class="stat__label">RTT restants</span>
+              <span class="stat__value">6 <span class="stat__unit">jours</span></span>
+              <div class="bar" aria-hidden="true"><div class="bar__fill" style="width: 60%"></div></div>
+              <span class="stat__hint">4 pris sur 10</span>
+            </li>
+            <li class="card stat">
+              <span class="stat__label">Notes de frais en attente</span>
+              <span class="stat__value">89,50 <span class="stat__unit">€</span></span>
+              <span class="stat__hint">1 note en cours de validation</span>
+            </li>
+            <li class="card stat">
+              <span class="stat__label">Matériel attribué</span>
+              <span class="stat__value">3 <span class="stat__unit">équipements</span></span>
+              <span class="stat__hint">Dernière attribution le 2 mars 2026</span>
+            </li>
+          </ul>
+        </section>
       </main>
     </div>
+    
   </body>
 </html>
