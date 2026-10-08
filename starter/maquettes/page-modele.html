@@ -1,0 +1,123 @@
+<!doctype html>
+<!-- lang : langue de la page, utilisee par les lecteurs d'ecran et les moteurs de recherche. -->
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- Sans cette balise, le mobile affiche la page en version desktop dezoomee. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Titre unique par page : "Nom de la page - Nom du site". C'est ce qui
+       s'affiche dans l'onglet, l'historique et les resultats de recherche. -->
+    <title>Dashboard - TechCorp RH</title>
+    <meta name="Page modele" content="shell." />
+
+    <!-- Application interne : pas d'indexation par les moteurs de recherche. -->
+    <meta name="robots" content="noindex, nofollow" />
+    <meta name="theme-color" content="#1d4ed8" />
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+
+    <link rel="stylesheet" href="css/main.css" />
+    <script src="js/app.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#contenu">Aller au contenu principal</a>
+
+    <div class="app">
+      <header class="app__header topbar">
+        <button
+          class="topbar__menu"
+          type="button"
+          data-nav-toggle
+          aria-expanded="false"
+          aria-controls="navigation"
+        >
+          <svg
+            class="nav__icon"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            aria-hidden="true"
+            focusable="false"
+          >
+            <path d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+          <span class="sr-only">Ouvrir le menu</span>
+        </button>
+
+        <a class="brand" href="dashboard-employe.html">
+          <img
+            class="brand__logo"
+            src="assets/logo.svg"
+            alt=""
+            width="32"
+            height="32"
+          />
+          TechCorp RH
+        </a>
+
+        <div class="topbar__actions">
+          <a class="icon-link" href="#">
+            <svg
+              class="nav__icon"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+              focusable="false"
+            >
+              <path d="M6 16v-5a6 6 0 1 1 12 0v5l2 2H4z" />
+              <path d="M10 21a2 2 0 0 0 4 0" />
+            </svg>
+            <span class="count" aria-hidden="true">3</span>
+            <span class="sr-only">Notifications, 3 non lues</span>
+          </a>
+          <div class="user">
+            <span class="avatar" aria-hidden="true">MB</span>
+            <div class="user__info">
+              <p class="user__name">Mounir Bendahmane</p>
+              <p class="user__role">Développeur</p>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <nav
+        class="app__sidebar sidebar"
+        id="navigation"
+        aria-label="Navigation principale"
+      >
+        <h2 class="nav__heading" id="nav-perso">Mon espace</h2>
+        <ul class="nav" role="list" aria-labelledby="nav-perso">
+          <li>
+            <a
+              class="nav__link"
+              href="dashboard-employe.html"
+              aria-current="page"
+              >Tableau de bord</a
+            >
+          </li>
+          <li>
+            <a class="nav__link" href="conges-demande.html">Mes congés</a>
+          </li>
+          <li>
+            <a class="nav__link" href="note-frais-nouvelle.html"
+              >Notes de frais</a
+            >
+          </li>
+          <li><a class="nav__link" href="materiel.html">Matériel</a></li>
+          <li><a class="nav__link" href="profil.html">Mon profil</a></li>
+        </ul>
+      </nav>
+
+      <main class="app__main" id="contenu" tabindex="-1">
+        <div class="container">
+          <p>Ceci est le shell!</p>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>

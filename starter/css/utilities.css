@@ -20,3 +20,9 @@
 .mb-4 {
   margin-bottom: var(--space-4);
 }
+.text-sm {
+  font-size: var(--text-sm);
+}
+.text-muted {
+  color: var(--color-text-muted);
+}

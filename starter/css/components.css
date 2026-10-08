@@ -184,6 +184,19 @@
   gap: var(--space-2);
   margin-left: auto;
 }
+.topbar .user__info {
+  display: none;
+}
+@media (min-width: 64em) {
+  .topbar__menu {
+    display: none;
+  }
+}
+@media (min-width: 40em) {
+  .topbar .user__info {
+    display: block;
+  }
+}
 .brand {
   display: inline-flex;
   align-items: center;
@@ -260,11 +273,6 @@
 
 .skip-link:focus {
   transform: translateY(0); /* visible au focus */
-}
-@media (min-width: 64em) {
-  .topbar__menu {
-    display: none;
-  }
 }
 
 .stat {
@@ -373,4 +381,221 @@
   height: 1.25rem;
   flex-shrink: 0;
   margin-top: 0.125rem;
+}
+
+.form {
+  display: grid;
+  gap: var(--space-5);
+}
+
+/* Deux champs cote a cote sur grand ecran (dates de debut et de fin). */
+.form__row {
+  display: grid;
+  gap: var(--space-5);
+}
+
+@media (min-width: 40em) {
+  .form__row {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.form__actions {
+  display: flex;
+  flex-wrap: wrap-reverse;
+  justify-content: flex-end;
+  gap: var(--space-3);
+  padding-top: var(--space-4);
+  border-top: 1px solid var(--color-border);
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.field__label {
+  font-weight: var(--weight-medium);
+}
+
+/* Le texte "(obligatoire)" est lu par le lecteur d'ecran, l'asterisque non. */
+.field__required {
+  color: var(--color-danger);
+}
+
+.field__hint {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+}
+
+.field__error {
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+  font-size: var(--text-sm);
+  font-weight: var(--weight-medium);
+  color: var(--color-danger);
+}
+
+.input,
+.select,
+.textarea {
+  width: 100%;
+  min-height: 2.75rem;
+  padding: var(--space-2) var(--space-3);
+  border: 1px solid var(--color-border-input);
+  border-radius: var(--radius);
+  background-color: var(--color-surface);
+  transition:
+    border-color var(--transition),
+    box-shadow var(--transition);
+}
+
+.textarea {
+  min-height: 6rem;
+  resize: vertical;
+}
+
+.input:hover,
+.select:hover,
+.textarea:hover {
+  border-color: var(--color-text);
+}
+
+.input:focus-visible,
+.select:focus-visible,
+.textarea:focus-visible {
+  outline: none;
+  border-color: var(--color-focus);
+  box-shadow:
+    0 0 0 3px var(--color-info-soft),
+    0 0 0 1px var(--color-focus);
+}
+
+/* L'etat d'erreur suit l'attribut aria-invalid, pose par le serveur ou le JS. */
+.input[aria-invalid="true"],
+.select[aria-invalid="true"],
+.textarea[aria-invalid="true"] {
+  border-color: var(--color-danger);
+  border-width: 2px;
+}
+
+.input:disabled,
+.select:disabled,
+.textarea:disabled {
+  color: var(--color-text-muted);
+  background-color: var(--color-surface-muted);
+  cursor: not-allowed;
+}
+.fieldset {
+  padding: 0;
+  border: 0;
+}
+
+.fieldset__legend {
+  margin-bottom: var(--space-3);
+  font-weight: var(--weight-medium);
+}
+
+/* Choix sous forme de cartes cliquables (type de conge, type de frais) */
+.choices {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(9rem, 1fr));
+  gap: var(--space-2);
+}
+
+.choice {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  min-height: 2.75rem;
+  padding: var(--space-3);
+  border: 1px solid var(--color-border-input);
+  border-radius: var(--radius);
+  background-color: var(--color-surface);
+  cursor: pointer;
+}
+
+.choice:hover {
+  background-color: var(--color-surface-muted);
+}
+
+/* accent-color colore les cases et boutons radio natifs. */
+.choice input,
+.checkbox input {
+  width: 1.125rem;
+  height: 1.125rem;
+  accent-color: var(--color-primary);
+}
+
+.checkbox {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-2);
+}
+
+.checkbox input {
+  margin-top: 0.2em;
+  flex-shrink: 0;
+}
+
+/* Zone de depot de fichier : on garde l'input natif, on habille le conteneur. */
+.dropzone {
+  display: grid;
+  gap: var(--space-2);
+  padding: var(--space-5);
+  border: 2px dashed var(--color-border-input);
+  border-radius: var(--radius-lg);
+  text-align: center;
+  background-color: var(--color-surface-muted);
+}
+
+/* Champ avec suffixe (montant en euros) */
+.input-group {
+  display: flex;
+}
+
+.input-group .input {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.input-group__addon {
+  display: grid;
+  place-items: center;
+  padding-inline: var(--space-3);
+  border: 1px solid var(--color-border-input);
+  border-left: 0;
+  border-radius: 0 var(--radius) var(--radius) 0;
+  color: var(--color-text-muted);
+  background-color: var(--color-surface-muted);
+}
+
+/* Regles du mot de passe affichees sous le champ */
+.rules {
+  display: grid;
+  gap: var(--space-1);
+  padding: 0;
+  font-size: var(--text-sm);
+  list-style: none;
+  color: var(--color-text-muted);
+}
+
+.rules li::before {
+  content: "- ";
+}
+.details {
+  display: grid;
+  gap: var(--space-4);
+}
+
+.details dt {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+}
+@media (min-width: 40em) {
+  .details {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }

@@ -155,6 +155,55 @@
           
         </div>
       </section>
+
+       <section aria-labelledby="sg-forms">
+        <h2 id="sg-forms">Champs de formulaire</h2>
+        <div class="form__row">
+          <div class="field">
+            <label class="field__label" for="sg-1">Champ normal</label>
+            <input
+              class="input"
+              id="sg-1"
+              type="text"
+              aria-describedby="sg-1-aide"
+            />
+            <p class="field__hint" id="sg-1-aide">
+              Texte d'aide associé par aria-describedby.
+            </p>
+          </div>
+          <div class="field">
+            <label class="field__label" for="sg-2">Champ en erreur</label>
+            <input
+              class="input"
+              id="sg-2"
+              type="text"
+              value="valeur"
+              aria-invalid="true"
+              aria-describedby="sg-2-err"
+            />
+            <p class="field__error" id="sg-2-err">
+              Message d'erreur explicite.
+            </p>
+          </div>
+          <div class="field">
+            <label class="field__label" for="sg-3">Liste déroulante</label>
+            <select class="select" id="sg-3">
+              <option>Option 1</option>
+              <option>Option 2</option>
+            </select>
+          </div>
+          <div class="field">
+            <label class="field__label" for="sg-4">Champ désactivé</label>
+            <input
+              class="input"
+              id="sg-4"
+              type="text"
+              value="Non modifiable"
+              disabled
+            />
+          </div>
+        </div>
+      </section>
     </main>
 
 
