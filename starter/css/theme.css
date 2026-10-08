@@ -14,9 +14,6 @@
    ========================================================================== */
 
 :root {
-  --color-primary: var(--green-800);
-  --color-primary-hover: var(--violet-800);
-  --color-primary-soft: var(--green-700);
   --color-focus: var(--blue-800);
   --font-sans: swap;
   /*
@@ -24,7 +21,16 @@
   --font-sans: "Inter", system-ui, sans-serif;
   --radius: 4px;
   */
+  --color-primary: var(#f8f9ff); /* 6.7:1 sur blanc */
+  --color-primary-hover: var(#131b2e);
+  --color-primary-soft: var(#316bf3);
+  --color-on-primary: var(#fefcff);
+
+  --color-bg: var(#e5eeff);
+  --color-surface: var(#f8f9ff);
+  --color-surface-muted: var(#eff4ff);
 }
+
 @font-face {
   font-family: "swap";
   src: local("swap"), url("../assets/static/Inter_18pt-Black.ttf");

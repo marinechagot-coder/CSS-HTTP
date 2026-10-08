@@ -78,9 +78,7 @@
         <h2 class="nav__heading" id="nav-perso">Mon espace</h2>
         <ul class="nav" role="list" aria-labelledby="nav-perso">
           <li>
-            <a
-              class="nav__link"
-              href="dashboard-employe.html"
+            <a class="nav__link" href="dashboard-employe.html"
               >Tableau de bord</a
             >
           </li>
@@ -108,7 +106,9 @@
           <li>
             <a class="nav__link" href="liste-demande.html">
               Demandes à traiter
-              <span class="count">5<span class="sr-only"> en attente</span></span>
+              <span class="count"
+                >5<span class="sr-only"> en attente</span></span
+              >
             </a>
           </li>
           <li>
@@ -125,14 +125,211 @@
             <div>
               <h1>Vue d'équipe</h1>
               <p class="page-header__subtitle">Pôle Web, 8 collaborateurs</p>
+            </div>
             <div class="page-header__actions">
-              <a class="btn btn--secondary" href="planning-equipe.html">Voir le planning</a>
-              <a class="btn btn--primary" href="liste-demande.html">Traiter les demandes</a>
+              <a class="btn btn--secondary" href="planning-equipe.html"
+                >Voir le planning</a
+              >
+              <a class="btn btn--primary" href="liste-demande.html"
+                >Traiter les demandes</a
+              >
             </div>
           </div>
+          <div class="alert alert--warning mb-4" role="status">
+            <svg
+              class="alert__icon"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+              focusable="false"
+            >
+              <path d="M12 3 2 21h20z" />
+              <path d="M12 10v4M12 17.5v.5" />
+            </svg>
+            <div>
+              <p class="alert__title">
+                Risque de sous-effectif du 26 au 30 octobre
+              </p>
+              <p>
+                3 collaborateurs sur 8 ont posé ou demandé un congé sur cette
+                période.
+              </p>
+            </div>
+          </div>
+          <section aria-labelledby="titre-indicateurs">
+            <h2 id="titre-indicateurs" class="sr-only">
+              Indicateurs de l'équipe
+            </h2>
+            <ul class="grid-auto list" role="list">
+              <li class="card stat">
+                <span class="stat__label">Congés à valider</span>
+                <span class="stat__value">5</span>
+                <span class="stat__hint">Dont 2 depuis plus de 7 jours</span>
+              </li>
+              <li class="card stat">
+                <span class="stat__label">Notes de frais à valider</span>
+                <span class="stat__value">3</span>
+                <span class="stat__hint">412,30 € au total</span>
+              </li>
+              <li class="card stat">
+                <span class="stat__label">Absents aujourd'hui</span>
+                <span class="stat__value"
+                  >2 <span class="stat__unit">sur 8</span></span
+                >
+                <span class="stat__hint">1 congé payé, 1 arrêt maladie</span>
+              </li>
+            </ul>
+          </section>
+          <div class="grid-split mt-5">
+            <section aria-labelledby="titre-attente">
+              <div class="card__header">
+                <h2 id="titre-attente" class="card__title">
+                  Dernières demandes en attente
+                </h2>
+                <a href="demandes-liste.html" class="text-sm"
+                  >Toutes les demandes</a
+                >
+              </div>
+              <div
+                class="table-wrapper"
+                role="region"
+                aria-labelledby="titre-attente"
+                tabindex="0"
+              >
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th scope="col">Collaborateur</th>
+                      <th scope="col">Demande</th>
+                      <th scope="col">Soumise le</th>
+                      <th scope="col"><span class="sr-only">Actions</span></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th scope="row">Claire Martin</th>
+                      <td>Congés payés, 26 au 30/10 (5 j)</td>
+                      <td><time datetime="2026-10-05">05/10/2026</time></td>
+                      <td>
+                        <a
+                          class="btn btn--ghost btn--sm"
+                          href="demande-detail.html"
+                          >Examiner<span class="sr-only">
+                            la demande de Claire Martin</span
+                          ></a
+                        >
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">Thomas Roux</th>
+                      <td>RTT, 30/10 (1 j)</td>
+                      <td><time datetime="2026-10-02">02/10/2026</time></td>
+                      <td>
+                        <a
+                          class="btn btn--ghost btn--sm"
+                          href="demande-detail.html"
+                          >Examiner<span class="sr-only">
+                            la demande de Thomas Roux</span
+                          ></a
+                        >
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">Amina Nasri</th>
+                      <td>Note de frais, transport (64,20 €)</td>
+                      <td><time datetime="2026-09-27">27/09/2026</time></td>
+                      <td>
+                        <a
+                          class="btn btn--ghost btn--sm"
+                          href="demande-detail.html"
+                          >Examiner<span class="sr-only">
+                            la note de frais d'Amina Nasri</span
+                          ></a
+                        >
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </section>
 
+            <section class="card" aria-labelledby="titre-equipe">
+              <div class="card__header">
+                <h2 id="titre-equipe" class="card__title">
+                  Présence aujourd'hui
+                </h2>
+              </div>
+              <ul class="list" role="list">
+                <li class="list__item">
+                  <div class="user">
+                    <span class="avatar avatar--sm" aria-hidden="true">CM</span>
+                    <div>
+                      <p class="user__name">Claire Martin</p>
+                      <p class="user__role">Développeuse</p>
+                    </div>
+                  </div>
+                  <span class="badge badge--approved">Présente</span>
+                </li>
+                <li class="list__item">
+                  <div class="user">
+                    <span class="avatar avatar--sm" aria-hidden="true">LD</span>
+                    <div>
+                      <p class="user__name">Lucas Dubois</p>
+                      <p class="user__role">Développeur</p>
+                    </div>
+                  </div>
+                  <span class="badge badge--rejected"
+                    >Absent, CP jusqu'au 9/10</span
+                  >
+                </li>
+                <li class="list__item">
+                  <div class="user">
+                    <span class="avatar avatar--sm" aria-hidden="true">AN</span>
+                    <div>
+                      <p class="user__name">Amina Nasri</p>
+                      <p class="user__role">UX designer</p>
+                    </div>
+                  </div>
+                  <span class="badge badge--approved">Présente</span>
+                </li>
+                <li class="list__item">
+                  <div class="user">
+                    <span class="avatar avatar--sm" aria-hidden="true">TR</span>
+                    <div>
+                      <p class="user__name">Thomas Roux</p>
+                      <p class="user__role">Développeur</p>
+                    </div>
+                  </div>
+                  <span class="badge badge--in-progress">Télétravail</span>
+                </li>
+                <li class="list__item">
+                  <div class="user">
+                    <span class="avatar avatar--sm" aria-hidden="true">JP</span>
+                    <div>
+                      <p class="user__name">Julie Petit</p>
+                      <p class="user__role">Testeuse QA</p>
+                    </div>
+                  </div>
+                  <span class="badge badge--rejected">Absente, maladie</span>
+                </li>
+                <li class="list__item">
+                  <div class="user">
+                    <span class="avatar avatar--sm" aria-hidden="true">MF</span>
+                    <div>
+                      <p class="user__name">Mehdi Fontaine</p>
+                      <p class="user__role">Tech lead</p>
+                    </div>
+                  </div>
+                  <span class="badge badge--approved">Présent</span>
+                </li>
+              </ul>
+            </section>
+          </div>
         </div>
-  
       </main>
     </div>
   </body>
