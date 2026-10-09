@@ -1,0 +1,248 @@
+<!doctype html>
+<!-- lang : langue de la page, utilisee par les lecteurs d'ecran et les moteurs de recherche. -->
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- Sans cette balise, le mobile affiche la page en version desktop dezoomee. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Titre unique par page : "Nom de la page - Nom du site". C'est ce qui
+       s'affiche dans l'onglet, l'historique et les resultats de recherche. -->
+    <title>Note de frais - TechCorp RH</title>
+    <meta name="Formulaire" content="frais." />
+
+    <!-- Application interne : pas d'indexation par les moteurs de recherche. -->
+    <meta name="robots" content="noindex, nofollow" />
+    <meta name="theme-color" content="#1d4ed8" />
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+
+    <link rel="stylesheet" href="css/main.css" />
+    <script src="js/app.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#contenu">Aller au contenu principal</a>
+
+    <div class="app">
+      <header class="app__header topbar">
+        <button
+          class="topbar__menu"
+          type="button"
+          data-nav-toggle
+          aria-expanded="false"
+          aria-controls="navigation"
+        >
+          <svg
+            class="nav__icon"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            aria-hidden="true"
+            focusable="false"
+          >
+            <path d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+          <span class="sr-only">Ouvrir le menu</span>
+        </button>
+
+        <a class="brand" href="dashboard-employe.html">
+          <img
+            class="brand__logo"
+            src="assets/logo.svg"
+            alt=""
+            width="32"
+            height="32"
+          />
+          TechCorp RH
+        </a>
+
+        <div class="topbar__actions">
+          <a class="icon-link" href="#">
+            <svg
+              class="nav__icon"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+              focusable="false"
+            >
+              <path d="M6 16v-5a6 6 0 1 1 12 0v5l2 2H4z" />
+              <path d="M10 21a2 2 0 0 0 4 0" />
+            </svg>
+            <span class="count" aria-hidden="true">3</span>
+            <span class="sr-only">Notifications, 3 non lues</span>
+          </a>
+          <div class="user">
+            <span class="avatar" aria-hidden="true">MB</span>
+            <div class="user__info">
+              <p class="user__name">Mounir Bendahmane</p>
+              <p class="user__role">Développeur</p>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <nav
+        class="app__sidebar sidebar"
+        id="navigation"
+        aria-label="Navigation principale"
+      >
+        <h2 class="nav__heading" id="nav-perso">Mon espace</h2>
+        <ul class="nav" role="list" aria-labelledby="nav-perso">
+          <li>
+            <a class="nav__link" href="dashboard-employe.html"
+              >Tableau de bord</a
+            >
+          </li>
+          <li>
+            <a class="nav__link" href="conges-demande.html">Mes congés</a>
+          </li>
+          <li>
+            <a
+              class="nav__link"
+              href="note-frais-nouvelle.html"
+              aria-current="page"
+              >Notes de frais</a
+            >
+          </li>
+          <li><a class="nav__link" href="materiel.html">Matériel</a></li>
+          <li><a class="nav__link" href="profil.html">Mon profil</a></li>
+        </ul>
+      </nav>
+
+      <main class="app__main" id="contenu" tabindex="-1">
+        <div class="container">
+          <form
+            class="card form"
+            action="#"
+            method="post"
+            enctype="multipart/form-data"
+          >
+            <p class="text-sm text-muted">
+              Les champs marqués d'un astérisque (<span class="field__required"
+                >*</span
+              >) sont obligatoires.
+            </p>
+            <div class="field">
+              <label class="field__label" for="date-depence">
+                Date de la dépence
+                <span class="field__required" aria-hidden="true">*</span>
+              </label>
+              <input
+                class="input"
+                type="date"
+                id="date-depence"
+                name="date_depence"
+                max="2026-10-09"
+                required
+              />
+            </div>
+            <fieldset class="fieldset">
+              <legend class="fieldset__legend">
+                Type de dépence
+                <span class="field__required" aria-hidden="true">*</span>
+              </legend>
+
+              <div class="choices">
+                <label class="choice"
+                  ><input type="radio" name="type" value="transport" />
+                  Transport</label
+                >
+                <label class="choice"
+                  ><input
+                    type="radio"
+                    name="type"
+                    value="restauration"
+                    required
+                  />Restauration
+                </label>
+                <label class="choice"
+                  ><input type="radio" name="type" value="hebergement" />
+                  Hébergement
+                </label>
+                <label class="choice"
+                  ><input type="radio" name="type" value="autre" /> Autre
+                </label>
+              </div>
+            </fieldset>
+
+            <label class="field__label" for="montant">Montant TTC</label>
+            <div class="input-group">
+              <input
+                class="input"
+                type="text"
+                id="montant"
+                inputmode="decimal"
+                pattern="[0-9]+([,.€][0-9]{1,2})?"
+                aria-describedby="montant-aide"
+                required
+              />
+              <span class="input-group__addon" aria-hidden="true">€</span>
+            </div>
+            <p class="field__hint" id="montant-aide">
+              En euros, par exemple 42,50
+            </p>
+            <div class="field">
+              <label class="field__label" for="description">Description </label>
+              <textarea
+                class="textarea"
+                id="description"
+                name="description"
+                maxlength="300"
+                aria-describedby="description-aide"
+                required
+              ></textarea>
+              <p class="field__hint" id="description-aide">
+                300 caractères maximum. Visible par votre manager et le service
+                RH.
+              </p>
+            </div>
+
+            <div class="field">
+              <label class="field__label" for="justificatif">
+                Justificatif
+              </label>
+              <div class="dropzone">
+                <input
+                  type="file"
+                  id="justificatif"
+                  name="justificatif"
+                  accept=".pdf,.jpg,.jpeg,.png"
+                  aria-describedby="justificatif-aide"
+                  required
+                />
+                <p class="field__hint" id="justificatif-aide">
+                  PDF, JPG, JPEG ou PNG, 5 Mo maximum.
+                </p>
+              </div>
+            </div>
+            <div>
+              <input
+                type="checkbox"
+                id="certification"
+                name="certification"
+                required
+              />
+              <label for="certification"
+                >Je certifie que cette dépense a été engagée dans le cadre de
+                mes fonctions.</label
+              >
+            </div>
+
+            <div class="form__actions">
+              <a class="btn btn--secondary" href="dashboard-employe.html"
+                >Annuler</a
+              >
+              <button class="btn btn--primary" type="submit">
+                Envoyer la demande
+              </button>
+            </div>
+          </form>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>
