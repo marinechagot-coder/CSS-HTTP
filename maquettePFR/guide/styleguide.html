@@ -1,0 +1,272 @@
+<!doctype html>
+<!-- lang : langue de la page, utilisee par les lecteurs d'ecran et les moteurs de recherche. -->
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- Sans cette balise, le mobile affiche la page en version desktop dezoomee. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Titre unique par page : "Nom de la page - Nom du site". C'est ce qui
+       s'affiche dans l'onglet, l'historique et les resultats de recherche. -->
+    <title>Guide de Style - IndCorp</title>
+    <meta
+      name="Guide de style - IndCorp"
+      content="decris la charte graphique du site IndCorp"
+    />
+
+    <!-- Application interne : pas d'indexation par les moteurs de recherche. -->
+    <meta name="robots" content="noindex, nofollow" />
+    <meta name="theme-color" content="#1d4ed8" />
+    <link rel="icon" href="../assets/logo.svg" type="image/svg+xml" />
+
+    <link rel="stylesheet" href="../css/main.css" />
+    <style>
+      main{
+        padding: 1rem;
+      }
+      h2 {
+        padding: 1rem 1rem;
+      }  
+      .couleurs__cadre {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-around;
+      }
+      .couleurs__box {
+        border: 1px solid;
+      }
+      .couleurs__pastille {
+        width: 15rem;
+        height: 5rem;
+        border: 2px solid;
+      }
+      .past_primary {background-color: var(--color-primary);}
+      .past_primary-hover {background-color: var(--color-primary-hover);}
+      .past_primary-soft {background: var(--color-primary-soft);}
+      .past_bg {background-color: var(--color-bg);}
+      .past_surface {background-color: var(--color-surface);}
+      .past_surface-muted {background-color: var(--color-surface-muted);}
+      .past_on-primary {background: var(--color-on-primary);}
+      .past_focus {background-color: var(--color-focus);}
+      .typo__cadre{padding: 1rem;}
+      .xxxl {font-size: var(--text-3xl);}
+      .xxl {font-size: var(--text-2xl);}
+      .xl {font-size: var(--text-xl);}
+      .base {font-size: var(--text-base);}
+      .xs {font-size: var(--text-xs);}
+      
+      .espa__cadre{padding: 1rem;}
+      .espa__box {
+        display: flex;
+        flex-direction: row;
+      }
+      .espa__pastille {
+        height: var(--text-base);
+        background-color: var(--color-primary);
+        border: 1px solid;
+      }
+      .past_space1{width: var(--space-1);}
+      .past_space2{width: var(--space-2);}
+      .past_space3{width: var(--space-3);}
+      .past_space4{width: var(--space-4);}
+    </style>
+    <script src="js/app.js" defer></script>
+  </head>
+  <body>
+    <main class="container">
+      <h1>Design system  IndCorp</h1>
+
+      <section class="couleurs" aria-labelledby="color">
+        <h2>Couleurs Sémantiques</h2>
+        <div class="couleurs__cadre">
+          <div class="couleurs__box">
+            <div class="couleurs__pastille past_primary"></div>
+            <h3 class="couleurs__titre">--color-primary</h3>        
+          </div>
+          <div class="couleurs__box">
+            <div class="couleurs__pastille past_primary-hover"></div>
+            <h3 class="couleurs__titre"> --color-primary-hover </h3>
+          </div>
+          <div class="couleurs__box">
+            <div class="couleurs__pastille past_primary-soft"></div>
+            <h3 class="couleurs__titre">--color-primary-soft </h3>
+          </div>
+
+          <div class="couleurs__box">
+            <div class="couleurs__pastille past_bg"></div>
+            <h3 class="couleurs__titre">--color-bg </h3>
+          </div>
+          <div class="couleurs__box">
+            <div class="couleurs__pastille past_surface"></div>
+            <h3 class="couleurs__titre">--color-surface</h3>        
+          </div>
+          <div class="couleurs__box">
+            <div class="couleurs__pastille past_surface-muted"></div>
+            <h3 class="couleurs__titre"> --color-surface-muted </h3>
+          </div>
+          <div class="couleurs__box">
+            <div class="couleurs__pastille past_focus"></div>
+            <h3 class="couleurs__titre">--color-focus </h3>
+          </div>
+
+          <div class="couleurs__box">
+            <div class="couleurs__pastille past_on-primary"></div>
+            <h3 class="couleurs__titre">--color-on-primary </h3>
+          </div>
+        </div>
+        
+        </div>
+      </section>
+
+      <section class="typo" aria-labelledby="typographies">
+        <h2>Typographie</h2>
+        <div class="typo__cadre">
+          <p class="xxxl">---text-3xl</p>
+          <p class="xxl">---text-2xl</p>
+          <p class="xl">---text-xl</p>
+          <p class="base">---text-base</p>
+          <p class="xs">---text-xs</p>
+          </div>
+        </div>
+      </section>
+            
+      <section class="espa" aria-labelledby="Espacement">
+        <h2>Espacements</h2>
+        <div class="espa__cadre">
+          <div class="espa__box"><div class="espa__pastille past_space1"></div><h3> --space-1 </h3></div>
+          <div class="espa__box"><div class="espa__pastille past_space2"></div><h3> --space-2 </h3></div>
+          <div class="espa__box"><div class="espa__pastille past_space3"></div><h3> --space-3 </h3></div>
+          <div class="espa__box"><div class="espa__pastille past_space4"></div><h3> --space-4 </h3></div>
+          </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="boutons" aria-labelledby="Boutons">
+        <h2>Boutons </h2>
+        <div class="boutons__cadre">
+          <button class="btn btn--primary" type="button">Primaire</button>
+          <button class="btn btn--secondary" type="button">Secondaire</button>
+          <button class="btn btn--danger" type="button">Danger</button>
+          <button class="btn btn--ghost" type="button">Discret</button>
+          <button class="btn btn--primary" type="button" disabled> Désactivé</button>
+          <button class="btn btn--primary btn--sm" type="button">Petit</button>
+        </div>
+      </section>
+
+      <section class="badges" aria-labelledby="badges">
+        <h2 >Badges de statut </h2>
+        <div class="badges__cadre">
+          <div class="badge badge--pending">En attente manager</div>
+          <div class="badge badge--in-progress">En attente RH</div>
+          <div class="badge badge--approved">Validée</div>
+          <div class="badge badge--rejected">Refusée</div>
+          <div class="badge">Brouillon</div>
+        </div>
+      </section>
+
+      <section class="alertes" aria-labelledby="alertes">
+        <h2 >Alertes </h2>
+        <div class="alertes__cadre">
+            <p class="alert alert--info"><span class="alert__title">Information.</span> Ceci est une information.</p>
+            <p class="alert alert--success"><span class="alert__title">Succès.</span> Ceci est un succès.</p>
+            <p class="alert alert--warning"><span class="alert__title">Attention.</span> Il fait faire attention.</p>
+            <p class="alert alert--error"><span class="alert__title">Erreur.</span> Ceci est une erreur.</p>
+          </div>
+          
+        </div>
+      </section>
+
+       <section aria-labelledby="sg-forms">
+        <h2 id="sg-forms">Champs de formulaire</h2>
+        <div class="form__row">
+          <div class="field">
+            <label class="field__label" for="sg-1">Champ normal</label>
+            <input
+              class="input"
+              id="sg-1"
+              type="text"
+              aria-describedby="sg-1-aide"
+            />
+            <p class="field__hint" id="sg-1-aide">
+              Texte d'aide associé par aria-describedby.
+            </p>
+          </div>
+          <div class="field">
+            <label class="field__label" for="sg-2">Champ en erreur</label>
+            <input
+              class="input"
+              id="sg-2"
+              type="text"
+              value="valeur"
+              aria-invalid="true"
+              aria-describedby="sg-2-err"
+            />
+            <p class="field__error" id="sg-2-err">
+              Message d'erreur explicite.
+            </p>
+          </div>
+          <div class="field">
+            <label class="field__label" for="sg-3">Liste déroulante</label>
+            <select class="select" id="sg-3">
+              <option>Option 1</option>
+              <option>Option 2</option>
+            </select>
+          </div>
+          <div class="field">
+            <label class="field__label" for="sg-4">Champ désactivé</label>
+            <input
+              class="input"
+              id="sg-4"
+              type="text"
+              value="Non modifiable"
+              disabled
+            />
+          </div>
+        </div>
+      </section>
+      <section aria-labelledby="sg-table">
+        <h2 id="sg-table">Tableau </h2>
+        <div
+          class="table-wrapper"
+          role="region"
+          aria-labelledby="sg-table-cap"
+          tabindex="0"
+        >
+          <table class="table">
+            <caption id="sg-table-cap">
+              Exemple de tableau accessible
+            </caption>
+            <thead>
+              <tr>
+                <th scope="col">Collaborateur</th>
+                <th scope="col">Type</th>
+                <th scope="col" class="table__num">Jours</th>
+                <th scope="col">Statut</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">Colla Borateur</th>
+                <td>Congés payés</td>
+                <td class="table__num">5</td>
+                <td>
+                  <span class="badge badge--pending">En attente manager</span>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">Un Autre</th>
+                <td>RTT</td>
+                <td class="table__num">1</td>
+                <td><span class="badge badge--approved">Validée</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+
+
+  </body>
+</html>
