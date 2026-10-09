@@ -8,7 +8,7 @@
 
     <!-- Titre unique par page : "Nom de la page - Nom du site". C'est ce qui
        s'affiche dans l'onglet, l'historique et les resultats de recherche. -->
-    <title>Dashboard - TechCorp RH</title>
+    <title>Dashboard - TechCorp</title>
     <meta name="Page modele" content="shell." />
 
     <!-- Application interne : pas d'indexation par les moteurs de recherche. -->
@@ -50,10 +50,10 @@
             class="brand__logo"
             src="assets/logo.svg"
             alt=""
-            width="32"
-            height="32"
+            width="63"
+            height="42"
           />
-          TechCorp RH
+          IndTech
         </a>
 
         <div class="topbar__actions">
@@ -75,13 +75,13 @@
             <span class="count" aria-hidden="true">3</span>
             <span class="sr-only">Notifications, 3 non lues</span>
           </a>
-          <div class="user">
-            <span class="avatar" aria-hidden="true">MB</span>
+          <a class="user" href="profil.html">
+            <span class="avatar" aria-hidden="true">JD</span>
             <div class="user__info">
-              <p class="user__name">Mounir Bendahmane</p>
-              <p class="user__role">Développeur</p>
+              <p class="user__name">Jane Doe</p>
+              <p class="user__role">Testeuse</p>
             </div>
-          </div>
+          </a>
         </div>
       </header>
 
@@ -97,25 +97,63 @@
               class="nav__link"
               href="dashboard-employe.html"
               aria-current="page"
-              >Tableau de bord</a
+            >
+              <img
+                class="nav__icon"
+                src="assets/tableaubord.svg"
+                alt=""
+                width="32"
+                height="32"
+              />
+              <span class="nav__txt">Tableau de bord</span>
+            </a>
+          </li>
+          <li>
+            <a class="nav__link" href="conges-demande.html">
+              <img
+                class="nav__icon"
+                src="assets/conges.svg"
+                alt=""
+                width="32"
+                height="32"
+              />
+              <span class="nav__txt"> Mes congés </span>
+            </a>
+          </li>
+          <li>
+            <a class="nav__link" href="note-frais-nouvelle.html">
+              <img
+                class="nav__icon"
+                src="assets/notefrais.svg"
+                alt=""
+                width="32"
+                height="32"
+              />
+              <span class="nav__txt"> Notes de frais</span></a
             >
           </li>
           <li>
-            <a class="nav__link" href="conges-demande.html">Mes congés</a>
+            <a class="nav__link" href="materiel.html">
+              <img
+                class="nav__icon"
+                src="assets/materiels.svg"
+                alt=""
+                width="32"
+                height="32"
+              />
+              <span class="nav__txt">Matériel</span>
+            </a>
           </li>
-          <li>
-            <a class="nav__link" href="note-frais-nouvelle.html"
-              >Notes de frais</a
-            >
-          </li>
-          <li><a class="nav__link" href="materiel.html">Matériel</a></li>
-          <li><a class="nav__link" href="profil.html">Mon profil</a></li>
+          <li></li>
         </ul>
       </nav>
 
       <main class="app__main" id="contenu" tabindex="-1">
         <div class="container">
-          <p>Ceci est le shell!</p>
+          <h1>Shell</h1>
+          <div>
+            <p>Ceci est le shell!</p>
+          </div>
         </div>
       </main>
     </div>
